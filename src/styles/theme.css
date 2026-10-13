@@ -1,0 +1,19 @@
+/* Design tokens + shared building blocks. Page-specific CSS lives in its own file. */
+:root{--bg:#F7F8F5;--card:#fff;--ink:#0B2E22;--mu:#5F6F64;--line:#E3E8DF;--soft:#E8EDE3;--brand:#0B2E22;--lime:#C6F135;--leaf:#1D9E75;--amber:#EF9F27;--warn-bg:#FFF1D6;--warn-tx:#7A4B00;--err:#B3261E}
+@media(prefers-color-scheme:dark){:root{--bg:#0A1511;--card:#11231B;--ink:#EAF2EC;--mu:#9FB3A8;--line:#1E3A2D;--soft:#16302A;--brand:#14382A;--warn-bg:#3A2C10;--warn-tx:#F0C36B;--err:#F2A7A0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,sans-serif;line-height:1.6}
+h1{font-size:26px;font-weight:800;margin:0 0 4px}h3{font-size:15px;margin:14px 0 8px}
+.mu{color:var(--mu);font-size:14px}.center{text-align:center}.err{color:var(--err);font-size:13px;margin:6px 0}
+.logo{font-weight:800;font-size:22px;text-align:right}.logo em{font-style:normal;color:var(--lime)}.logo u{text-decoration:none;color:var(--amber)}
+button{font-family:inherit;cursor:pointer}
+.btn{border:0;border-radius:14px;padding:13px 26px;font-weight:700;font-size:15px}
+.btn.dark{background:var(--brand);color:var(--lime)}.btn.lime{background:var(--lime);color:#0B2E22}.btn.full{width:100%}.btn.big{padding:15px 36px}
+.btn.outline{background:var(--card);color:var(--ink);border:1px solid var(--line)}.btn.ghost{background:transparent;color:#fff;border:1px solid #3A5A4C;padding:10px 20px;font-size:14px}
+.input{width:100%;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;margin-bottom:12px}
+.input:focus-visible,button:focus-visible{outline:2px solid var(--leaf);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
+.warn{background:var(--warn-bg);color:var(--warn-tx);border-radius:12px;padding:11px 14px;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:7px 14px;border-radius:20px;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.chip.on{background:var(--brand);color:var(--lime);border-color:var(--brand)}
+.check{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mu);margin:10px 0}
